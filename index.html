@@ -1,124 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电梯工程技术课程</title>
-</head>
-<body style="background-image:url(https://api.cyrilstudio.top/bing/image.php/rand=true，day=0，size=800x600)"jpg {
-        width: 100%,
-        height: 100%
- 
-  <!-- 背景 -->
-
-<style type="text/css">
-    .mytable{
-        width:700px;                           
-        height:350px;                         
-        margin:0 auto;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPA Pronunciation Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .button {
+      background: #fff;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .button:hover {
+      background: #007BFF;
+      color: #fff;
     }
   </style>
-     <!-- 天气 --><iframe allowtransparency="true" frameborder="0" width="800" height="60" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=0&v=0&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=0&a=0&c=71835&w=731&h=28&align=center"></iframe>
-<!-- 表格toble
-行 tr tows
-列 td      -->
-<table class="mytable" border="0"> <!-- border为1有边框 -->
-        <!-- colspan 跨列 -->       
-    <tr>
-    <td>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间</td>                     
-    <td>周&nbsp;&nbsp;一</td>
-    <td>周&nbsp;&nbsp;二</td>                               	 
-    <td>周&nbsp;&nbsp;三</td>
-    <td>周&nbsp;&nbsp;四</td>
-    <td>周&nbsp;&nbsp;五</td>
-    </tr>
-    <tr>
-        <!-- colspan 跨列 -->        
-         <td>8:30-9:15<br/>9:25-10:10</td>
-        <td>没课</td>
-        <td>没课</td>                              
-        <td>电梯电气原理与设计A202</td>
-        <td>液压与气动传动A206</td>
-        <td>电梯故障诊断与维护A202</td>
-    </tr>
-    
-    <tr>
- 
-        <td>10:20-11:05<br/>11:15-11:55</td>       <!-- <td bgcolor="#f12711"9:50-10:35<br/>10:45-11:30</td>颜色 -->
-        <td>电梯电气原理与设计A202</td>
-        <td>液压与气动传动A206</td>
-        <td>毛概1-301</td>
-        <td>电梯电气原理与设计A202</td>
-        <td>电梯智能化技术A202</td>       
-    </tr>
-    <tr>
+</head>
+<body>
+  <h1>美式 IPA 音标发音练习</h1>
+  <div class="grid" id="ipa-buttons"></div>
 
-        <td>14:30-15:15<br/>15:25-16:10</td>
-        <td>电梯故障与诊断A202</td>
-        <td>体育</td>
-        <td>电梯故障与诊断A202</td>
-        <td>没课</td>
-        <td>没课</td>
-    </tr>
-    <tr>
+  <script>
+    const ipaData = [
+      { symbol: '/iː/', audio: 'see' },
+      { symbol: '/ɪ/', audio: 'sit' },
+      { symbol: '/e/', audio: 'bed' },
+      { symbol: '/æ/', audio: 'cat' },
+      { symbol: '/ɑː/', audio: 'car' },
+      { symbol: '/ʌ/', audio: 'cup' },
+      { symbol: '/ɝ/', audio: 'bird' },
+      { symbol: '/ə/', audio: 'ago' },
+      { symbol: '/uː/', audio: 'blue' },
+      { symbol: '/ʊ/', audio: 'book' },
+      { symbol: '/aɪ/', audio: 'my' },
+      { symbol: '/aʊ/', audio: 'now' },
+      { symbol: '/eɪ/', audio: 'say' },
+      { symbol: '/oʊ/', audio: 'go' },
+      { symbol: '/ɔɪ/', audio: 'boy' },
+      { symbol: '/tʃ/', audio: 'chair' },
+      { symbol: '/dʒ/', audio: 'just' },
+      { symbol: '/θ/', audio: 'think' },
+      { symbol: '/ð/', audio: 'this' },
+      { symbol: '/ʃ/', audio: 'she' },
+      { symbol: '/ʒ/', audio: 'measure' },
+      { symbol: '/ŋ/', audio: 'sing' },
+      { symbol: '/r/', audio: 'red' },
+      { symbol: '/j/', audio: 'yes' },
+      { symbol: '/w/', audio: 'we' }
+    ];
 
-        <td>16:20-17:05<br/>17:15-18:00</td>
-        <td>没课</td>
-        <td>形势与政策一号楼三楼阶梯教室</td>
-        <td>电梯智能化技术A202</td>
-        <td>没课</td>
-        <td>没课</td>
-    </tr>
-</table>
-<div class="show-sentence">
-    <p class="text"></p>
-    <p class="source">
-        ———— <span class="author"></span>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-        <style>
-            body {
-            	/* 图片引自百度 可根据需求变换 */
-               
-            }
-            .text {
-                color: white;
-                text-shadow: 5px 5px gray;  /* 字体阴影 */
-                font-size: 35px;
-                font-family: STXingkai;
-            }
-            .source {
-                color: white;
-                font-size: 25px;
-                padding-left: 40%;
-                font-family: STXingkai;
-            }
-            .show-sentence {
-                display: none;    /* 一开始隐藏div标签 */
-                text-align: center;
-            }
-        </style>
-        <script>
-        	// 异步ajax
-            $.ajax({
-                type: 'GET',
-                url: 'https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335',
-                success: function(data){
-                    $(".text").text(data.hitokoto);  // 获取名言内容
-                    if (data.source){     // 如果来源不为空
-                        $(".author").text(data.source);
-                    } else {
-                        $(".source").hide();   // 隐藏来源
-                    }
-                    // 淡入显示
-                    $(".show-sentence").fadeIn(4000)
-                },
-            });
-        </script>
-  
-       
-            </p>
-        </div>
-        <p align="center">QQ46878895</p>
+    const container = document.getElementById('ipa-buttons');
+
+    ipaData.forEach(item => {
+      const button = document.createElement('div');
+      button.className = 'button';
+      button.textContent = item.symbol;
+      button.onclick = () => {
+        if ('speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(item.audio);
+          utterance.lang = 'en-US';
+          speechSynthesis.speak(utterance);
+        } else {
+          alert('当前浏览器不支持语音朗读功能');
+        }
+      };
+      container.appendChild(button);
+    });
+  </script>
 </body>
 </html>
